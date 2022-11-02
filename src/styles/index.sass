@@ -1,21 +1,30 @@
-/* Android Large Light */
-    
 $white: rgb(239, 239, 239)
-$black: #2a2a2a
+$black: rgb(42, 42, 42)
 $light-black: rgb(42, 42, 42, .125)
 
-$large-mobile: 20px
-$small-mobile: 16px
+$pixel-unit: 8px
+$quarter-pixel-unit: 2px
 
-$small-mobile-line-height: 24px
-$large-mobile-line-height: 28px
+$small-font-mobile: 2.25 * $pixel-unit
+$large-font-mobile: 2.75 * $pixel-unit
+$small-font-desktop: 4 * $pixel-unit
+$medium-font-desktop: 6 * $pixel-unit
+$large-font-desktop: 10 * $pixel-unit
 
-$decorative: "Leckerli One"
-$standard: "Poppins"
+$small-mobile-line-height: 3 * $pixel-unit
+$large-mobile-line-height: 4.5 * $pixel-unit
+$small-desktop-line-height: 7 * $pixel-unit
+$large-desktop-line-height: 8 * $pixel-unit
+
+$decorative-font: "Leckerli One", cursive
+$standard-font: "Poppins", sans-serif
 
 $header-shadow: 0 2px 8px 0 $light-black
 $footer-shadow: 0 -2px 8px 0 $light-black
-$dice-shadow: 8px 8px 0 $light-black
+$mobile-dice-shadow: 8px 8px 0 $light-black
+$desktop-dice-shadow: 16px 16px 0 $light-black
+
+$image-size: 292px
 
 * 
     padding: 0
@@ -24,3 +33,75 @@ $dice-shadow: 8px 8px 0 $light-black
 
 html 
     user-select: none
+    font-family: $standard-font
+    font-size: $small-font-mobile
+    line-height: $small-mobile-line-height
+    background-image: url("../../public/anthony_lee_unsplash.png")
+    background-size: contain 
+
+header
+    text-align: center
+    padding: 3 * $pixel-unit 0
+
+h1
+    font-family: $decorative-font
+    font-size: $large-font-mobile
+    line-height: $large-mobile-line-height
+
+.controls
+    display: flex
+    justify-content: space-evenly
+    margin: 4.5 * $pixel-unit 0
+
+.title
+    font-family: $decorative-font
+    font-size: $large-font-mobile
+    line-height: $large-mobile-line-height
+
+h2
+    font-family: $decorative-font
+    line-height: $large-mobile-line-height
+    font-size: $large-font-mobile
+    text-align: center
+    margin-bottom: $pixel-unit
+
+.content
+    margin: 0 7 * $pixel-unit
+    line-height: $large-mobile-line-height
+
+.text
+    display: flex
+    flex-direction: column
+    align-items: center
+
+.image
+    width: $image-size
+    height: $image-size
+
+footer
+    text-align: center
+    padding: 2 * $pixel-unit 0
+    margin-top: 4.5 * $pixel-unit
+
+@media(prefers-color-scheme: light)
+    html
+        color: $black
+        background-color: $white
+
+    header, footer
+        background-color: $white
+
+    .dice
+        fill: $black
+        
+@media(prefers-color-scheme: dark)
+    html
+        color: $white
+        background-color: $black
+
+    header, footer
+        background-color: $black
+
+    .dice
+        fill: $white 
+// optimized for screens 320px> and 425px<
