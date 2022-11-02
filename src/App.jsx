@@ -1,5 +1,8 @@
 import DiceIcon from "./DiceIcon";
 import "./styles/index.css";
+import { poems } from "./poems";
+
+const index = 0, verseNumber = 0;
 
 export default function App() {
   return (
@@ -10,8 +13,8 @@ export default function App() {
       <main>
         <article className="controls">
           <section className="name">
-            <p className="author">Leopold Staff</p>
-            <p className="title">Deszcz Jesienny</p>
+            <p className="author">{poems[index].author}</p>
+            <p className="title">{poems[index].title}</p>
           </section>
           <section className="draw">
             <DiceIcon />
@@ -20,17 +23,10 @@ export default function App() {
         </article>
         <article className="text">
           <h2>Tekst:</h2>
-          <p className="content">
-            O szy­by deszcz dzwo­ni, deszcz dzwo­ni je­sien­ny <br />
-            I plusz­cze jed­na­ki, mia­ro­wy, niezmien­ny <br /> 
-            Dżdżu kro­ple pa­da­ją i tłu­ką w me okno... <br />
-            Jęk szkla­ny... płacz szkla­ny... a szy­by w mgle mok­ną <br /> 
-            I świa­tła sza­re­go blask są­czy się sen­ny...</p> <br />
-          <img src="../public/illustrations/skull.png" alt="" className="image"/>
-          <p className="content">
-            O szy­by deszcz dzwo­ni, deszcz dzwo­ni je­sien­ny... <br />
-            Wie­czor­nych snów mary powiew­ne, dzie­wi­cze <br />
-            Na próż­no cze­ka­ły na słoń­ca ob­li­cze...</p>
+          <p className="content" dangerouslySetInnerHTML={
+            { __html: poems[index].verse[verseNumber] }
+          }></p> 
+          <img src="/illustrations/skull.png" alt="" className="image"/>
         </article>
       </main>
       <footer>
