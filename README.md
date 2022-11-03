@@ -1,4 +1,4 @@
-# Jesienna-Poezja
+# Jesienna Poezja
 
 Zbiór jesiennych wierszy
 
