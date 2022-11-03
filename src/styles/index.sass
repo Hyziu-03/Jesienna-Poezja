@@ -1,30 +1,6 @@
-$white: rgb(239, 239, 239)
-$black: rgb(42, 42, 42)
-$light-black: rgb(42, 42, 42, .125)
+/* Optimized for screens between 320px and 1440px viewport width */
 
-$pixel-unit: 8px
-$quarter-pixel-unit: 2px
-
-$small-font-mobile: 2.25 * $pixel-unit
-$large-font-mobile: 2.75 * $pixel-unit
-$small-font-desktop: 4 * $pixel-unit
-$medium-font-desktop: 6 * $pixel-unit
-$large-font-desktop: 10 * $pixel-unit
-
-$small-mobile-line-height: 3 * $pixel-unit
-$large-mobile-line-height: 4.5 * $pixel-unit
-$small-desktop-line-height: 7 * $pixel-unit
-$large-desktop-line-height: 8 * $pixel-unit
-
-$decorative-font: "Leckerli One", cursive
-$standard-font: "Poppins", sans-serif
-
-$header-shadow: 0 2px 8px 0 $light-black
-$footer-shadow: 0 -2px 8px 0 $light-black
-$mobile-dice-shadow: 8px 8px 0 $light-black
-$desktop-dice-shadow: 16px 16px 0 $light-black
-
-$image-size: 292px
+@import "variables"
 
 * 
     padding: 0
@@ -39,11 +15,11 @@ html
     background-image: url("/anthony_lee_unsplash.png")
     background-size: contain 
 
-header
+.header
     text-align: center
     padding: 3 * $pixel-unit 0
 
-h1
+.heading
     font-family: $decorative-font
     font-size: $large-font-mobile
     line-height: $large-mobile-line-height
@@ -51,14 +27,27 @@ h1
 .controls
     display: flex
     justify-content: space-evenly
+    align-items: center
     margin: 4.5 * $pixel-unit 0
+
+.draw
+    display: flex
+    flex-direction: column
+    align-items: center
+
+.caption
+    margin-top: $pixel-unit
+    display: none
 
 .title
     font-family: $decorative-font
     font-size: $large-font-mobile
     line-height: $large-mobile-line-height
 
-h2
+.dice
+    box-shadow: $dice-shadow
+
+.subheading
     font-family: $decorative-font
     line-height: $large-mobile-line-height
     font-size: $large-font-mobile
@@ -78,17 +67,18 @@ h2
     width: $image-size
     height: $image-size
 
-footer
+.footer
     text-align: center
     padding: 2 * $pixel-unit 0
     margin-top: 4.5 * $pixel-unit
 
+/* Color themes */
 @media(prefers-color-scheme: light)
     html
         color: $black
         background-color: $white
 
-    header, footer
+    .header, .footer
         background-color: $white
 
     .dice
@@ -99,9 +89,23 @@ footer
         color: $white
         background-color: $black
 
-    header, footer
+    .header, .footer
         background-color: $black
 
     .dice
         fill: $white 
-// optimized for screens 320px> and 425px<
+
+@media(min-width: 768px)
+    .caption
+        display: inline
+
+@media(min-width: 1024px)
+    html, .heading, .title, .subheading
+        font-size: $font-desktop
+        line-height: $desktop-line-height
+
+    .caption
+        margin-top: 0
+
+    .content
+        line-height: $desktop-line-height
