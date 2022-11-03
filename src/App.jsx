@@ -1,37 +1,42 @@
-import DiceIcon from "./DiceIcon";
 import "./styles/index.css";
 import { poems } from "./poems";
+import { generateRandomNumberInRange } from "isola/utilities";
 
-const index = 0, verseNumber = 0;
+import DiceIcon from "./DiceIcon";
+import Header from "./Header";
+import Footer from "./Footer";
 
 export default function App() {
+  function drawPoem() {
+    const index = generateRandomNumberInRange(0, poems.length) - 1;
+    document.getElementById("author").innerText = poems[index].author;
+    document.getElementById("title").innerText = poems[index].title;
+  }
+  window.addEventListener("load", drawPoem);
+
   return (
     <div className="App">
-      <header>
-        <h1>jesienna.poezja.vercel.app</h1>
-      </header>
+      <Header />
       <main>
+        {/* The interactive part starts from here */}
         <article className="controls">
           <section className="name">
-            <p className="author">{poems[index].author}</p>
-            <p className="title">{poems[index].title}</p>
+            <p className="author" id="author"></p>
+            <p className="title" id="title"></p>
           </section>
-          <section className="draw">
+          <section className="draw" onClick={drawPoem}>
             <DiceIcon />
-            {/*<p className="caption">Wylosuj kolejny wiersz!</p>*/}
+            <p className="caption">Wylosuj kolejny wiersz!</p>
           </section>
         </article>
         <article className="text">
-          <h2>Tekst:</h2>
-          <p className="content" dangerouslySetInnerHTML={
-            { __html: poems[index].verse[verseNumber] }
-          }></p> 
-          <img src="/illustrations/skull.png" alt="" className="image"/>
+          <h2 className="subheading">Tekst:</h2>
+            <p className="content"></p> 
+          <img src="/illustrations/dalle_pumpkin_01.png" alt="" className="image"/>
         </article>
+        {/* The interactive part ends up here */}
       </main>
-      <footer>
-        <p>Szymon Hyziak &copy; 2022</p>
-      </footer>
+      <Footer />
     </div>
   )
 }
