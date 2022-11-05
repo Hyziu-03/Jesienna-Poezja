@@ -65,7 +65,7 @@ html {
 }
 
 .content {
-  margin: 0 56px;
+  max-width: 60vw;
   line-height: 36px;
 }
 
