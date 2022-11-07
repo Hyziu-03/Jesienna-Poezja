@@ -2,48 +2,58 @@ import "../styles/index.css";
 
 import { poems } from "../utilities/poems";
 import { drawIndex, drawImage } from "../utilities/utilities";
-import { refresh } from "isola/browser";
+// import { useState } from "react";
 
-import DiceIcon from "./DiceIcon";
 import Header from "./Header";
 import Footer from "./Footer";
+import Draw from "./Draw";
 
 export default function App() {
+  // const [ currentVerse, setCurrenVerse ] = useState(0);
+  // const [ index, setDrawnIndex ] = useState();
+  // const [ author, setAuthor ] = useState();
+  // const [ title, setTitle ] = useState();
   const index = drawIndex();
   const author = poems[index].author;
   const title = poems[index].title;
   const verses = poems[index].verses;
+  const totalVerses = verses.length;
+  let counter = 0;
 
   return (
     <div className="App">
       <Header />
       <main>
-        {/* The interactive part starts from here */}
         <article className="controls">
-          <section className="name">
-            <p className="author">{author}</p>
-            <p className="title">{title}</p>
+          <section className="name" tabIndex={0}>
+            <p className="author" tabIndex={0}>{author}</p>
+            <p className="title" tabIndex={0}>{title}</p>
           </section>
-          <section className="draw" onClick={refresh}>
-            <DiceIcon />
-            <p className="caption">Wylosuj kolejny wiersz!</p>
-          </section>
+          <Draw />
         </article>
         <article className="text">
-          <h2 className="subheading">Tekst:</h2>
-          {verses.map((verse) => {
-            return (
+          <h2 className="subheading" tabIndex={0}>Tekst:</h2>
+          {verses.map(verse => {
+            counter += 1;
+            if(counter < totalVerses) return (
               <>
                 <p
                   className="content"
                   dangerouslySetInnerHTML={{ __html: verse }}
+                  tabIndex={0}
                 ></p>
-                <img src={drawImage()} alt="" className="image" />
+                <img src={drawImage()} alt="" className="image" tabIndex={0}/>
               </>
+            );
+            else return (
+              <p
+                className="content"
+                dangerouslySetInnerHTML={{ __html: verse }}
+                tabIndex={0}
+              ></p>
             );
           })}
         </article>
-        {/* The interactive part ends up here */}
       </main>
       <Footer />
     </div>
