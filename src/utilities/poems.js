@@ -6,14 +6,5 @@ export const poems = [{
       "Je­sień jest zło­ta, sny by­wa­ły zło­te <br/> I zło­te wło­sy, tu­dzież zło­te ser­ca, <br/> Te­raz sny z zda­rzeń bar­dzo sza­rych plo­tę, <br/> Bo chłód je­sie­ni ich urok uśmier­ca. <br/> Zło­te zaś ser­ce w sa­mot­ni łza­wi, <br/> A co do wło­sów zło­tych - to nie bawi. <br/>",
       "Jesz­cze zo­sta­ła tyl­ko zło­ta je­sień. <br/> Po­god­ne nie­bo wrze­śnio­wym wie­czo­rem; <br/> Po la­tach złu­dzeń, wio­sny i unie­sień <br/> Liść żół­ty z zie­mi jak skarb cen­ny bio­rę, <br/> Ten za­chód ży­cia dziw­nie mnie roz­ma­rza, <br/> Cóż jest u dia­bła.. czyż­bym się ze­sta­rzał? <br/>"
     ]
-  },
-  {
-    "author": "Tadeusz Różewicz",
-    "title": "Bursztynowy ptaszek",
-    "verses": [
-      "Je­sień <br/> pta­szek bursz­ty­no­wy <br/> przej­rzy­sty <br/> z ga­łąz­ki na ga­łąz­kę <br/> nosi kro­plę zło­ta. <br/>",
-      "Je­sień <br/> pta­szek ru­bi­no­wy <br/> świe­tli­sty <br/> z ga­łąz­ki na ga­łąz­kę <br/> nosi kro­plę krwi. <br/>",
-      "Je­sień <br/> pta­szek la­zu­ro­wy <br/> umie­ra <br/> z ga­łąz­ki na ga­łąz­kę <br/> kro­pla desz­czu spa­da. <br/>"
-    ]
   }
 ];

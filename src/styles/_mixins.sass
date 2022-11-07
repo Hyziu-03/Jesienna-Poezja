@@ -1,0 +1,23 @@
+@mixin hoverable
+    border-radius: $pixel-unit * 2
+    border: $quarter-pixel-unit * 2 solid transparent
+    transition: .25s all ease
+
+    &:hover
+        cursor: pointer
+
+        @media(prefers-color-scheme: light)
+            border-color: $black
+        
+        @media(prefers-color-scheme: dark)
+            border-color: $white
+
+@mixin overflow 
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+
+@mixin flex
+    display: flex
+    flex-wrap: wrap
+    align-items: center
