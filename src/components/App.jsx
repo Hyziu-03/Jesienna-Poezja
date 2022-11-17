@@ -1,24 +1,30 @@
 import "../styles/index.css";
 
+import { drawImage, drawIndex } from "../utilities/utilities";
 import { poems } from "../utilities/poems";
-import { drawIndex, drawImage } from "../utilities/utilities";
-// import { useState } from "react";
+import { initial } from "../utilities/initialValues";
+import { useState } from "react";
 
 import Header from "./Header";
 import Footer from "./Footer";
-import Draw from "./Draw";
+import DiceIcon from "./DiceIcon";
 
 export default function App() {
-  // const [ currentVerse, setCurrenVerse ] = useState(0);
-  // const [ index, setDrawnIndex ] = useState();
-  // const [ author, setAuthor ] = useState();
-  // const [ title, setTitle ] = useState();
-  const index = drawIndex();
-  const author = poems[index].author;
-  const title = poems[index].title;
-  const verses = poems[index].verses;
-  const totalVerses = verses.length;
   let counter = 0;
+
+  const [ index, setIndex ] = useState(0);
+  const [ author, setAuthor ] = useState(initial.author);
+  const [ title, setTitle ] = useState(initial.title);
+  const [ verses, setVerses ] = useState(initial.verses.content);
+  const [ totalVerses, getTotalVerses ] = useState(initial.verses.length);
+
+  function drawPoem() {
+    setIndex(drawIndex());
+    setAuthor(poems[index].author);
+    setTitle(poems[index].title);
+    setVerses(poems[index].verses);
+    getTotalVerses(verses.length);
+  }
 
   return (
     <div className="App">
@@ -29,7 +35,10 @@ export default function App() {
             <p className="author" tabIndex={0}>{author}</p>
             <p className="title" tabIndex={0}>{title}</p>
           </section>
-          <Draw />
+          <section className="draw" tabIndex={0} onClick={drawPoem}>
+            <DiceIcon />
+            <p className="caption">Wylosuj kolejny wiersz!</p>
+          </section>
         </article>
         <article className="text">
           <h2 className="subheading" tabIndex={0}>Tekst:</h2>
@@ -41,6 +50,7 @@ export default function App() {
                   className="content"
                   dangerouslySetInnerHTML={{ __html: verse }}
                   tabIndex={0}
+                  key={counter}
                 ></p>
                 <img src={drawImage()} alt="" className="image" tabIndex={0}/>
               </>
@@ -50,6 +60,7 @@ export default function App() {
                 className="content"
                 dangerouslySetInnerHTML={{ __html: verse }}
                 tabIndex={0}
+                key={counter}
               ></p>
             );
           })}
