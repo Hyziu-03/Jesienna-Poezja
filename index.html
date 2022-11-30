@@ -1,30 +1,113 @@
 <!DOCTYPE html>
 
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<meta name="robots" content="index, follow" />
+		<meta name="author" content="Szymon Hyziak" />
+		<meta
+			http-equiv="X-UA-Compatible"
+			content="IE=edge"
+		/>
+		<meta name="title" content="" />
+		<!-- add title -->
+		<meta
+			name="description"
+			content=""
+		/>
+		<!-- add description -->
+		<meta
+			name="keywords"
+			content=""
+		/>
+		<!-- add keywords -->
+		<meta name="revisit-after" content="14 days" />
+		<meta property="og:title" content="" />
+		<meta property="og:site_name" content="" />
+		<!-- add open graph names -->
+		<meta
+			property="og:description"
+			content=""
+		/>
+		<!-- add open graph description -->
+		<meta property="og:type" content="website" />
+		<meta property="og:image" content="" />
+		<!-- add open graph image -->
+		<meta
+			property="og:url"
+			content=""
+		/>
+		<meta
+			property="twitter:url"
+			content=""
+		/>
+		<!-- add urls -->
+		<meta property="twitter:image" content="" />
+		<meta
+			property="twitter:card"
+			content="summary_large_image"
+		/>
+		<meta property="twitter:title" content="" />
+		<meta
+			property="twitter:description"
+			content=""
+		/>
+		<!-- add twitter metadata -->
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="index, follow">
-  <meta name="author" content="Szymon Hyziak">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Jesienna Poezja</title>
 
-  <title>Jesienna Poezja</title>
+		<link rel="canonical" href="" />
+		<!-- add canonical link -->
+		<link rel="icon" href="" />
+		<!-- add favicon -->
+		<link
+			rel="preconnect"
+			href="https://fonts.googleapis.com"
+		/>
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Leckerli+One&family=Poppins&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Leckerli+One&family=Poppins&display=swap"
-    rel="stylesheet"
-  >
-</head>
-
-<body>
-  <div id="root"></div>
-  <script type="module" src="/src/main.jsx"></script>
-  <script>
-    const registerServiceWorker=async()=>{if("serviceWorker"in navigator)try{const e=await navigator.serviceWorker.register("/service-worker.js",{scope:"."});e.installing?console.log("Service worker is being installed"):e.waiting?console.log("Service worker has been installed"):e.active&&console.log("Service worker is active")}catch(e){console.error(e)}};registerServiceWorker();
-  </script>
-</body>
-
+	<body>
+		<div id="root"></div>
+		<script type="module" src="/src/main.jsx"></script>
+		<script>
+			const registerServiceWorker = async () => {
+				if ("serviceWorker" in navigator)
+					try {
+						const e =
+							await navigator.serviceWorker.register(
+								"/service-worker.js",
+								{ scope: "." }
+							);
+						e.installing
+							? console.log(
+									"Service worker is being installed"
+							  )
+							: e.waiting
+							? console.log(
+									"Service worker has been installed"
+							  )
+							: e.active &&
+							  console.log(
+									"Service worker is active"
+							  );
+					} catch (e) {
+						console.error(e);
+					}
+			};
+			registerServiceWorker();
+		</script>
+	</body>
 </html>
