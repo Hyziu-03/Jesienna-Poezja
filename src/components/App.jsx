@@ -12,11 +12,11 @@ import DiceIcon from "./DiceIcon";
 export default function App() {
   let counter = 0;
 
-  const [ index, setIndex ] = useState(0);
-  const [ author, setAuthor ] = useState(initial.author);
-  const [ title, setTitle ] = useState(initial.title);
-  const [ verses, setVerses ] = useState(initial.verses.content);
-  const [ totalVerses, getTotalVerses ] = useState(initial.verses.length);
+  const [index, setIndex] = useState(0);
+  const [author, setAuthor] = useState(initial.author);
+  const [title, setTitle] = useState(initial.title);
+  const [verses, setVerses] = useState(initial.verses.content);
+  const [totalVerses, getTotalVerses] = useState(initial.verses.length);
 
   function drawPoem() {
     setIndex(drawIndex());
@@ -44,7 +44,7 @@ export default function App() {
           <h2 className="subheading" tabIndex={0}>Tekst:</h2>
           {verses.map(verse => {
             counter += 1;
-            if(counter < totalVerses) return (
+            if (counter < totalVerses) return (
               <>
                 <p
                   className="content"
@@ -52,7 +52,7 @@ export default function App() {
                   tabIndex={0}
                   key={counter}
                 ></p>
-                <img src={drawImage()} alt="" className="image" tabIndex={0}/>
+                <img src={drawImage()} alt="" className="image" tabIndex={0} />
               </>
             );
             else return (

@@ -3,18 +3,18 @@
 @import "variables"
 @import "mixins"
 
-* 
+*
     padding: 0
     margin: 0
     box-sizing: border-box
 
-html 
+html
     user-select: none
     font-family: $standard-font
     font-size: $small-font-mobile
     line-height: $small-mobile-line-height
     background-image: url("/anthony_lee_unsplash.png")
-    background-size: contain 
+    background-size: contain
 
 [tabindex="0"]
     outline-offset: $pixel-unit
@@ -43,7 +43,7 @@ html
     margin-top: $pixel-unit
     display: none
 
-.author 
+.author
     @include overflow
 
 .title
@@ -69,11 +69,11 @@ html
 .text
     @include flex
     flex-direction: column
-    
+
 .image
     width: $image-size
     height: $image-size
-    object-fit: cover 
+    object-fit: cover
     margin: $pixel-unit * 2 0
     pointer-events: none
 
@@ -93,7 +93,7 @@ html
 
     .dice
         fill: $black
-        
+
 @media(prefers-color-scheme: dark)
     html
         color: $white
@@ -103,7 +103,7 @@ html
         background-color: $black
 
     .dice
-        fill: $white 
+        fill: $white
 
 @media(min-width: 768px)
     .caption
