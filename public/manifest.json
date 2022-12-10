@@ -1,20 +1,50 @@
 {
-	"short_name": "",
-	"name": "",
+	"short_name": "KALNICA",
+	"name": "KALNICA - Jesienna Poezja",
 	"icons": [
 		{
-			"src": "",
-			"sizes": "",
+			"src": "./icons/maskable_icon_x48.png",
+			"sizes": "48x48",
+			"type": ""
+		},
+		{
+			"src": "./icons/maskable_icon_x72.png",
+			"sizes": "72x72",
+			"type": ""
+		},
+		{
+			"src": "./icons/maskable_icon_x96.png",
+			"sizes": "96x96",
+			"type": ""
+		},
+		{
+			"src": "./icons/maskable_icon_x128.png",
+			"sizes": "128x128",
+			"type": ""
+		},
+		{
+			"src": "./icons/maskable_icon_x192.png",
+			"sizes": "192x192",
+			"type": ""
+		},
+		{
+			"src": "./icons/maskable_icon_x384.png",
+			"sizes": "384x384",
+			"type": ""
+		},
+		{
+			"src": "./icons/maskable_icon_x512.png",
+			"sizes": "512x512",
 			"type": ""
 		}
 	],
-	"start_url": "",
+	"start_url": "/",
 	"display": "standalone",
-	"theme_color": "",
-	"background_color": "",
+	"theme_color": "rgb(42, 42, 42)",
+	"background_color": "rgb(42, 42, 42)",
 	"prefer_related_applications": false,
 	"orientation": "portrait-primary",
-	"description": "",
+	"description": "Jesienna Poezja",
 	"scope": ".",
-	"id": ""
+	"id": "/"
 }
