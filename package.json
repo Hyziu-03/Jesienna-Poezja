@@ -10,6 +10,7 @@
 	},
 	"dependencies": {
 		"compression-webpack-plugin": "^10.0.0",
+		"firebase": "^9.15.0",
 		"isola": "^1.2.2",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
