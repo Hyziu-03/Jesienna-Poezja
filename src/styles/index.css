@@ -112,6 +112,11 @@ html {
 	margin-bottom: 8px;
 }
 
+pre {
+	font-family: "Poppins", sans-serif;
+	white-space: pre-line;
+}
+
 .content {
 	max-width: 80vw;
 	line-height: 36px;

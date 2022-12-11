@@ -1,16 +1,97 @@
 export const poems = [
 	{
-		author: "Konstanty Ćwiek",
-		title: "Zlota jesien",
+		author: "Leopold Staff",
+		title: "Jesień",
 		verses: [
-			"Pięk­na jest pol­ska je­sień w li­ściach zło­tych, <br/> W uśmie­chach słoń­ca bla­dych i ła­god­nych. <br/> Liść spa­da ci­cho jak zło­ci­sty mo­tyl: <br/> Wie­czór gwiaź­dzi­sty jest rzeź­wią­co chłod­ny <br/> Do lasu te­raz iść bie­rze ocho­ta: <br/> Ileż tam te­raz z li­ści żół­tych zło­ta. <br/>",
-			"Je­sień jest zło­ta, sny by­wa­ły zło­te <br/> I zło­te wło­sy, tu­dzież zło­te ser­ca, <br/> Te­raz sny z zda­rzeń bar­dzo sza­rych plo­tę, <br/> Bo chłód je­sie­ni ich urok uśmier­ca. <br/> Zło­te zaś ser­ce w sa­mot­ni łza­wi, <br/> A co do wło­sów zło­tych - to nie bawi. <br/>",
-			"Jesz­cze zo­sta­ła tyl­ko zło­ta je­sień. <br/> Po­god­ne nie­bo wrze­śnio­wym wie­czo­rem; <br/> Po la­tach złu­dzeń, wio­sny i unie­sień <br/> Liść żół­ty z zie­mi jak skarb cen­ny bio­rę, <br/> Ten za­chód ży­cia dziw­nie mnie roz­ma­rza, <br/> Cóż jest u dia­bła.. czyż­bym się ze­sta­rzał? <br/>",
+			`
+			<pre>Jesień mnie cieniem zwiędłych drzew dotyka,
+Słońce rozpływa się gasnącym złotem.
+Pierścień dni moich z wolna się zamyka,
+Czas mnie otoczył zwartym żywopłotem.</pre>
+			`,
+			`
+			<pre>Ledwo ponad mogę sięgnąć okiem
+Na pola szarym cichnące milczeniem.
+Serce uśmierza się tętnem głębokiem.
+Czemu nachodzisz mnie, wiosno, wspomnieniem?</pre>
+			`,
+			`
+			<pre>Tak wiele ważnych spraw mam do zachodu,
+Zanim z mym cieniem zostaniemy sami.
+Czemu mi rzucasz kamień do ogrodu
+I mącisz moją rozmowę z ptakami?</pre>
+			`,
+		],
+	},
+	{
+		author: "Kazimiera Iłłakowiczówna",
+		title: "O jesieni, jesieni",
+		verses: [
+			`
+			<pre>Niech się wszystko odnowi, odmieni….
+O jesieni, jesieni, jesieni …..
+Niech się nocą do głębi przeźrocza
+nowe gwiazdy urodzą czy stoczą,
+niech się spełni, co się nie odstanie,
+choćby krzywda, choćby ból bez miary,
+niesłychane dla serca ofiary,
+gniew czy miłość, życie czy skonanie,
+niech się tylko coś prędko odmieni.
+O jesieni!… jesieni! … jesieni!</pre>
+			`,
+			`
+			<pre>Ja chcę burzy, żeby we mnie z siłą
+znowu serce gorzało i biło,
+żeby życie uniosło mnie całą
+i jak trzcinę w objęciu łamało!
+Nie trzymajcie, nie wchodźcie mi w drogę
+już się tyle rozprysło wędzideł …
+Ja chcę szczęścia i bólu, i skrzydeł
+i tak dłużej nie mogę, nie mogę!
+Niech się wszystko odnowi, odmieni! …
+O jesieni! … jesieni! … jesieni.</pre>
+			`,
+		],
+	},
+	{
+		author: "Adam Asnyk",
+		title: "Astry",
+		verses: [
+			`
+			<pre>Znowu więdną wszystkie zioła,
+Tylko srebrne astry kwitną,
+Zapatrzone w chłodną niebios
+Toń błękitną…
+Jakże smutna teraz jesień!
+Ach, smutniejsza niż przed laty,
+Choć tak samo żółkną liście
+Więdną kwiaty
+I tak samo noc miesięczna
+Sieje jasność, smutek, ciszę
+I tak samo drzew wierzchołki
+Wiatr kołysze
+Ale teraz braknie sercu
+Tych upojeń i uniesień
+Co swym czarem ożywiały
+Smutna jesień
+Dawniej miała noc jesienna
+Dźwięk rozkoszy w swoim hymnie
+Bo anielska, czysta postać
+Stała przy mnie
+Przypominam jeszcze teraz
+Bladej twarzy alabastry,
+Krucze włosy – a we włosach
+Srebrne astry…
+Widzę jeszcze ciemne oczy…
+I pieszczotę w ich spojrzeniu
+Widzę wszystko w księżycowym
+Oświetleniu…</pre>
+			`,
 		],
 	},
 ];
 
 // http://www.zosia.piasta.pl/o-jesieni.htm
 // https://poezja.org/wz/zbior/Wiersze_o_jesieni/
-// https://zinterpretuj.pl/wiersze/o-jesieni/
+// https://zinterpretuj.pl/wiersze/o-jesieni/#Jesien_-_Jan_Brzechwa
 // https://exerim.pl/strefa/wiersze-o-jesieni
