@@ -34,7 +34,7 @@ html
     top: 0
 
 .heading
-    font-family: $decorative-font
+    @include decorative-font
     font-size: $large-font-mobile
     line-height: $large-mobile-line-height
 
@@ -60,16 +60,16 @@ html
     @include overflow
 
 .title
-    font-family: $decorative-font
     font-size: $large-font-mobile
     line-height: $large-mobile-line-height
     @include overflow
+    @include decorative-font
 
 .dice
     box-shadow: $dice-shadow
 
 .subheading
-    font-family: $decorative-font
+    @include decorative-font
     line-height: $large-mobile-line-height
     font-size: $large-font-mobile
     text-align: center

@@ -40,7 +40,8 @@ html {
 }
 
 .heading {
-	font-family: "Leckerli One", cursive;
+	font-family: "Rubik Dirt", cursive;
+	letter-spacing: 1px;
 	font-size: 22px;
 	line-height: 36px;
 }
@@ -92,12 +93,13 @@ html {
 }
 
 .title {
-	font-family: "Leckerli One", cursive;
 	font-size: 22px;
 	line-height: 36px;
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
+	font-family: "Rubik Dirt", cursive;
+	letter-spacing: 1px;
 }
 
 .dice {
@@ -105,7 +107,8 @@ html {
 }
 
 .subheading {
-	font-family: "Leckerli One", cursive;
+	font-family: "Rubik Dirt", cursive;
+	letter-spacing: 1px;
 	line-height: 36px;
 	font-size: 22px;
 	text-align: center;
