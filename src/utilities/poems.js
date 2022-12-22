@@ -90,8 +90,3 @@ Oświetleniu…</pre>
 		],
 	},
 ];
-
-// http://www.zosia.piasta.pl/o-jesieni.htm
-// https://poezja.org/wz/zbior/Wiersze_o_jesieni/
-// https://zinterpretuj.pl/wiersze/o-jesieni/#Jesien_-_Jan_Brzechwa
-// https://exerim.pl/strefa/wiersze-o-jesieni

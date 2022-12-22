@@ -23,12 +23,7 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-if (typeof app === "object")
-	console.log("Firebase app has been initialised");
-
 const analytics = getAnalytics(app);
-if (typeof analytics === "object")
-	console.log("Google analytics has been initialised");
 
 export default function App() {
 	let counter = 0;
@@ -73,7 +68,12 @@ export default function App() {
 									tabIndex={0}
 									key={counter}
 								></p>
-								<img src={drawImage()} alt="" className="image" tabIndex={0} />
+								<img
+									src={drawImage()}
+									alt=""
+									className="image"
+									tabIndex={0}
+								/>
 							</>
 						);
 						else return (
@@ -91,5 +91,3 @@ export default function App() {
 		</div>
 	);
 }
-
-// firebase deploy --only hosting:kalnica
