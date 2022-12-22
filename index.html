@@ -30,17 +30,16 @@
 			content="Jesienna Poezja"
 		/>
 		<meta property="og:type" content="website" />
-		<meta property="og:image" content="screenshot.webp" />
 		<meta
-			property="og:url"
-			content=""
+			property="og:image"
+			content="screenshot.webp"
 		/>
+		<meta property="og:url" content="" />
+		<meta property="twitter:url" content="" />
 		<meta
-			property="twitter:url"
-			content=""
+			property="twitter:image"
+			content="screenshot.webp"
 		/>
-		<!-- add urls -->
-		<meta property="twitter:image" content="screenshot.webp" />
 		<meta
 			property="twitter:card"
 			content="summary_large_image"
@@ -50,15 +49,12 @@
 			property="twitter:description"
 			content="Jesienna Poezja"
 		/>
-		<!-- add twitter metadata -->
 
 		<title>KALNICA - Jesienna Poezja</title>
 
-		<link rel="manifest" href="manifest.json">
+		<link rel="manifest" href="manifest.json" />
 		<link rel="canonical" href="" />
-		<!-- add canonical link -->
 		<link rel="icon" href="favicon.svg" />
-		<!-- add favicon -->
 		<link
 			rel="preconnect"
 			href="https://fonts.googleapis.com"
@@ -69,7 +65,7 @@
 			crossorigin
 		/>
 		<link
-			href="https://fonts.googleapis.com/css2?family=Leckerli+One&family=Poppins&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Rubik+Dirt&family=Poppins&display=swap"
 			rel="stylesheet"
 		/>
 	</head>
@@ -78,31 +74,7 @@
 		<div id="root"></div>
 		<script type="module" src="/src/main.jsx"></script>
 		<script>
-			const registerServiceWorker = async () => {
-				if ("serviceWorker" in navigator)
-					try {
-						const e =
-							await navigator.serviceWorker.register(
-								"/service-worker.js",
-								{ scope: "." }
-							);
-						e.installing
-							? console.log(
-									"Service worker is being installed"
-							  )
-							: e.waiting
-							? console.log(
-									"Service worker has been installed"
-							  )
-							: e.active &&
-							  console.log(
-									"Service worker is active"
-							  );
-					} catch (e) {
-						console.error(e);
-					}
-			};
-			registerServiceWorker();
+			const registerServiceWorker=async()=>{if("serviceWorker" in navigator)try{const e=await navigator.serviceWorker.register("/service-worker.js",{scope:"."});e.installing?console.log("Service worker is being installed"):e.waiting?console.log("Service worker has been installed"):e.active&&console.log("Service worker is active")}catch(e){console.error(e)}};registerServiceWorker()
 		</script>
 	</body>
 </html>

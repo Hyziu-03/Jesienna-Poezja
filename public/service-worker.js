@@ -1,4 +1,4 @@
-const CACHE_NAME = "poetry-cache";
+const CACHE_NAME = "kalnica-cache";
 
 self.addEventListener("fetch", event => {
 	if (!(event.request.url.indexOf("http") === 0)) return;
@@ -38,7 +38,7 @@ self.addEventListener("activate", event => {
 								cacheName
 							)
 						)
-							return caches.delete(cacheName);
+						return caches.delete(cacheName);
 					})
 				)
 			)

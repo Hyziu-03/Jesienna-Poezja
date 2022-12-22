@@ -2,3 +2,4 @@ node_modules
 src/styles/index.css.map
 src/styles/variables.css
 src/styles/variables.css.map
+.prettierrc
