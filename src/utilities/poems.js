@@ -80,7 +80,7 @@ Bo anielska, czysta postać
 Stała przy mnie
 Przypominam jeszcze teraz
 Bladej twarzy alabastry,
-Krucze włosy – a we włosach
+Krucze włosy - a we włosach
 Srebrne astry…
 Widzę jeszcze ciemne oczy…
 I pieszczotę w ich spojrzeniu

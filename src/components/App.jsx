@@ -3,13 +3,14 @@ import "../styles/index.css";
 import { drawImage, drawIndex } from "../utilities/utilities";
 import { poems } from "../utilities/poems";
 import { initial } from "../utilities/initialValues";
-import { useState } from "react";
+
+import React, { Suspense, useState } from "react";
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 
-import Header from "./Header";
-import Footer from "./Footer";
-import DiceIcon from "./DiceIcon";
+const Header = React.lazy(() => import("./Header"));
+const Footer = React.lazy(() => import("./Footer"));
+const DiceIcon = React.lazy(() => import("./DiceIcon"));
 
 const firebaseConfig = {
 	apiKey: "AIzaSyBRrjB8_eQrUfPAqsLvByLkNblswtsfkAM",
@@ -26,8 +27,6 @@ const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 
 export default function App() {
-	let counter = 0;
-
 	const [index, setIndex] = useState(0);
 	const [author, setAuthor] = useState(initial.author);
 	const [title, setTitle] = useState(initial.title);
@@ -42,12 +41,41 @@ export default function App() {
 		getTotalVerses(verses.length);
 	}
 
+	let counter = 0;
+	const versesHTML = verses.map(verse => {
+		counter += 1;
+		
+		const key = crypto.randomUUID();
+		if (counter < totalVerses) return (
+			<><p 	
+				className="content" tabIndex={0} 
+				key={key + "paragraph"}
+				dangerouslySetInnerHTML={{
+					__html: verse,
+				}}
+			></p>
+			<img
+				src={drawImage()} alt=""
+				className="image" tabIndex={0}
+				key={key + "-image"}
+			/></>
+		); else return (
+			<p
+				className="content" tabIndex={0} 
+				dangerouslySetInnerHTML={{
+					__html: verse,
+				}}
+				key={key + "-paragraph"}
+			></p>
+		);
+	});
+
 	return (
 		<div className="App">
 			<Header />
 			<main>
 				<article className="controls">
-					<section className="name" tabIndex={0}>
+					<section className="name">
 						<p className="author" tabIndex={0}>{author}</p>
 						<p className="title" tabIndex={0}>{title}</p>
 					</section>
@@ -58,33 +86,7 @@ export default function App() {
 				</article>
 				<article className="text">
 					<h2 className="subheading" tabIndex={0}>Tekst:</h2>
-					{verses.map(verse => {
-						counter += 1;
-						if (counter < totalVerses) return (
-							<>
-								<p
-									className="content"
-									dangerouslySetInnerHTML={{ __html: verse }}
-									tabIndex={0}
-									key={counter}
-								></p>
-								<img
-									src={drawImage()}
-									alt=""
-									className="image"
-									tabIndex={0}
-								/>
-							</>
-						);
-						else return (
-							<p
-								className="content"
-								dangerouslySetInnerHTML={{ __html: verse }}
-								tabIndex={0}
-								key={counter}
-							></p>
-						);
-					})}
+					{versesHTML}
 				</article>
 			</main>
 			<Footer />
