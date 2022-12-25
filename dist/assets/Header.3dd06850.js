@@ -1,0 +1,1 @@
+import{j as e}from"./index.52992a2e.js";function r(){return e("header",{className:"header",tabIndex:0,children:e("h1",{className:"heading",children:"KALNICA - Jesienna Poezja"})})}export{r as default};
