@@ -13,7 +13,7 @@ html
     font-family: $standard-font
     font-size: $small-font-mobile
     line-height: $small-mobile-line-height
-    background-image: url("/anthony_lee_unsplash.png")
+    background-image: url("/assets/anthony-lee-unsplash.webp")
     background-size: contain
 
 ::-webkit-scrollbar
@@ -39,9 +39,12 @@ html
     line-height: $large-mobile-line-height
     padding: 0 $pixel-unit * 2
 
+.name
+    margin-bottom: $pixel-unit * 3
+
 .controls
     justify-content: space-evenly
-    margin: 4.5 * $pixel-unit 0
+    margin: 4.5 * $pixel-unit
     @include flex
 
 .draw
@@ -63,8 +66,12 @@ html
 .title
     font-size: $large-font-mobile
     line-height: $large-mobile-line-height
+    max-width: $title-width
     @include overflow
     @include decorative-font
+
+.name
+    max-width: $title-width
 
 .dice
     box-shadow: $dice-shadow
@@ -101,6 +108,7 @@ pre
     margin-top: 4.5 * $pixel-unit
     position: sticky
     bottom: 0
+    font-size: $small-font-mobile
 
 /* Color themes */
 @media(prefers-color-scheme: light)

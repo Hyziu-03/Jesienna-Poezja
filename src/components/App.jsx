@@ -2,7 +2,7 @@ import "../styles/index.css";
 
 import { drawImage, drawIndex } from "../utilities/utilities";
 import { poems } from "../utilities/poems";
-import { initial } from "../utilities/initialValues";
+import { initial } from "../utilities/initial-values";
 
 import React, { Suspense, useState } from "react";
 import { initializeApp } from "firebase/app";

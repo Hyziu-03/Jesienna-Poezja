@@ -1,92 +1,97 @@
 export const poems = [
 	{
-		author: "Leopold Staff",
-		title: "Jesień",
+		author: "Tadeusz Wywrocki",
+		title: "Jak nie kochać jesieni...",
 		verses: [
-			`
-			<pre>Jesień mnie cieniem zwiędłych drzew dotyka,
-Słońce rozpływa się gasnącym złotem.
-Pierścień dni moich z wolna się zamyka,
-Czas mnie otoczył zwartym żywopłotem.</pre>
-			`,
-			`
-			<pre>Ledwo ponad mogę sięgnąć okiem
-Na pola szarym cichnące milczeniem.
-Serce uśmierza się tętnem głębokiem.
-Czemu nachodzisz mnie, wiosno, wspomnieniem?</pre>
-			`,
-			`
-			<pre>Tak wiele ważnych spraw mam do zachodu,
-Zanim z mym cieniem zostaniemy sami.
-Czemu mi rzucasz kamień do ogrodu
-I mącisz moją rozmowę z ptakami?</pre>
-			`,
+			"Jak nie kochać jesieni, jej babiego lata, <br/> Liści niesionych wiatrem, w rytm deszczu tańczących. <br/> Ptaków, co przed podróżą na drzewach usiadły, <br/> Czekając na swych braci, za morze lecących.",
+			"Jak nie kochać jesieni, jej barw purpurowych, <br/> Szarych, żółtych, czerwonych, srebrnych, szczerozłotych. <br/> Gdy białą mgłą otuli zachodzący księżyc, <br/> Kojąc w twym słabym sercu, codzienne zgryzoty.",
+			"Jak nie kochać jesieni, smutnej, zatroskanej, <br/> Pełnej tęsknoty za tym, co już nie powróci. <br/> Chryzantemy pobieli, dla tych, których nie ma. <br/> Szronem łąki maluje, ukoi, zasmuci.",
+			"Jak nie kochać jesieni, siostry listopada, <br/> Tego, co królowanie blaskiem świec rozpocznie. <br/> I w swoim majestacie uczy nas pokory. <br/> Bez słowa na cmentarze wzywa nas corocznie.",
 		],
 	},
 	{
-		author: "Kazimiera Iłłakowiczówna",
-		title: "O jesieni, jesieni",
-		verses: [
-			`
-			<pre>Niech się wszystko odnowi, odmieni….
-O jesieni, jesieni, jesieni …..
-Niech się nocą do głębi przeźrocza
-nowe gwiazdy urodzą czy stoczą,
-niech się spełni, co się nie odstanie,
-choćby krzywda, choćby ból bez miary,
-niesłychane dla serca ofiary,
-gniew czy miłość, życie czy skonanie,
-niech się tylko coś prędko odmieni.
-O jesieni!… jesieni! … jesieni!</pre>
-			`,
-			`
-			<pre>Ja chcę burzy, żeby we mnie z siłą
-znowu serce gorzało i biło,
-żeby życie uniosło mnie całą
-i jak trzcinę w objęciu łamało!
-Nie trzymajcie, nie wchodźcie mi w drogę
-już się tyle rozprysło wędzideł …
-Ja chcę szczęścia i bólu, i skrzydeł
-i tak dłużej nie mogę, nie mogę!
-Niech się wszystko odnowi, odmieni! …
-O jesieni! … jesieni! … jesieni.</pre>
-			`,
-		],
+		author: "",
+		title: "",
+		verses: [],
 	},
 	{
-		author: "Adam Asnyk",
-		title: "Astry",
-		verses: [
-			`
-			<pre>Znowu więdną wszystkie zioła,
-Tylko srebrne astry kwitną,
-Zapatrzone w chłodną niebios
-Toń błękitną…
-Jakże smutna teraz jesień!
-Ach, smutniejsza niż przed laty,
-Choć tak samo żółkną liście
-Więdną kwiaty
-I tak samo noc miesięczna
-Sieje jasność, smutek, ciszę
-I tak samo drzew wierzchołki
-Wiatr kołysze
-Ale teraz braknie sercu
-Tych upojeń i uniesień
-Co swym czarem ożywiały
-Smutna jesień
-Dawniej miała noc jesienna
-Dźwięk rozkoszy w swoim hymnie
-Bo anielska, czysta postać
-Stała przy mnie
-Przypominam jeszcze teraz
-Bladej twarzy alabastry,
-Krucze włosy - a we włosach
-Srebrne astry…
-Widzę jeszcze ciemne oczy…
-I pieszczotę w ich spojrzeniu
-Widzę wszystko w księżycowym
-Oświetleniu…</pre>
-			`,
-		],
+		author: "",
+		title: "",
+		verses: [],
+	},
+	{
+		author: "",
+		title: "",
+		verses: [],
+	},
+	{
+		author: "",
+		title: "",
+		verses: [],
+	},
+	{
+		author: "",
+		title: "",
+		verses: [],
+	},
+	{
+		author: "",
+		title: "",
+		verses: [],
+	},
+	{
+		author: "",
+		title: "",
+		verses: [],
+	},
+	{
+		author: "",
+		title: "",
+		verses: [],
+	},
+	{
+		author: "",
+		title: "",
+		verses: [],
+	},
+	{
+		author: "",
+		title: "",
+		verses: [],
+	},
+	{
+		author: "",
+		title: "",
+		verses: [],
+	},
+	{
+		author: "",
+		title: "",
+		verses: [],
+	},
+	{
+		author: "",
+		title: "",
+		verses: [],
+	},
+	{
+		author: "",
+		title: "",
+		verses: [],
+	},
+	{
+		author: "",
+		title: "",
+		verses: [],
+	},
+	{
+		author: "",
+		title: "",
+		verses: [],
+	},
+	{
+		author: "",
+		title: "",
+		verses: [],
 	},
 ];

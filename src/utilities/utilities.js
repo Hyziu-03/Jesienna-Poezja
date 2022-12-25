@@ -2,6 +2,7 @@ import {
 	generateRandomNumberInRange,
 	getRandomElement,
 } from "isola/utilities";
+
 import { poems } from "./poems";
 
 export function drawImage() {
