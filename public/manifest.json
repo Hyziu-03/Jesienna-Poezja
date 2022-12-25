@@ -3,39 +3,40 @@
 	"name": "KALNICA - Jesienna Poezja",
 	"icons": [
 		{
-			"src": "./icons/maskable_icon_x48.png",
+			"src": "./icons/maskable_icon_x48.webp",
 			"sizes": "48x48",
-			"type": ""
+			"type": "image/webp"
 		},
 		{
-			"src": "./icons/maskable_icon_x72.png",
+			"src": "./icons/maskable_icon_x72.webp",
 			"sizes": "72x72",
-			"type": ""
+			"type": "image/webp"
 		},
 		{
-			"src": "./icons/maskable_icon_x96.png",
+			"src": "./icons/maskable_icon_x96.webp",
 			"sizes": "96x96",
-			"type": ""
+			"type": "image/webp"
 		},
 		{
-			"src": "./icons/maskable_icon_x128.png",
+			"src": "./icons/maskable_icon_x128.webp",
 			"sizes": "128x128",
-			"type": ""
+			"type": "image/webp"
 		},
 		{
-			"src": "./icons/maskable_icon_x192.png",
+			"src": "./icons/maskable_icon_x192.webp",
 			"sizes": "192x192",
-			"type": ""
+			"type": "image/webp"
 		},
 		{
-			"src": "./icons/maskable_icon_x384.png",
+			"src": "./icons/maskable_icon_x384.webp",
 			"sizes": "384x384",
-			"type": ""
+			"type": "image/webp"
 		},
 		{
-			"src": "./icons/maskable_icon_x512.png",
+			"src": "./icons/maskable_icon_x512.webp",
 			"sizes": "512x512",
-			"type": ""
+			"type": "image/webp",
+			"purpose": "maskable"
 		}
 	],
 	"start_url": "/",
@@ -46,5 +47,6 @@
 	"orientation": "portrait-primary",
 	"description": "Jesienna Poezja",
 	"scope": ".",
-	"id": "/"
+	"id": "/",
+	"dir": "ltr"
 }
