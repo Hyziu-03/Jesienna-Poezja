@@ -41,15 +41,18 @@ html
 
 .name
     margin-bottom: $pixel-unit * 3
+    text-align: center
 
 .controls
     justify-content: space-evenly
+    flex-direction: column
     margin: 4.5 * $pixel-unit
     @include flex
 
 .draw
     flex-direction: column
     padding: $pixel-unit * 2
+    width: $title-width
     @include flex
     @include hoverable
 
@@ -88,7 +91,7 @@ pre
     white-space: pre-line
 
 .content
-    max-width: 80vw
+    max-width: 55vw
     line-height: $large-mobile-line-height
 
 .text
