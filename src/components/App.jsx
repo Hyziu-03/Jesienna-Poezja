@@ -4,7 +4,8 @@ import React, { Suspense, useState } from "react";
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getDatabase, ref, child, get } from "firebase/database";
-import { getRandomElement, generateRandomNumberInRange } from "isola/utilities";
+import { getStorage, ref as storageRef, listAll } from "firebase/storage";
+import { generateRandomNumberInRange, getRandomElement } from "isola/utilities";
 
 const Header = React.lazy(() => import("./Header"));
 const Footer = React.lazy(() => import("./Footer"));
@@ -23,24 +24,7 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
-
-function drawImage() {
-	try {
-		const illustrations = [
-			"/images/c9YD8Qw2HT.webp", "/images/cqTnZ6R0ft.webp",
-			"/images/EoPMjgRhuR.webp", "/images/F9LRcJIzSA.webp",
-			"/images/FSAPqbdUYz.webp", "/images/gmWh5bnUsl.webp",
-			"/images/gUEluvQrrX.webp", "/images/hHkSPKmjpH.webp",
-			"/images/JlUAAzCuSf.webp", "/images/tEnZcNHW6H.webp",
-			"/images/UmzqhdP0jA.webp", "/images/V83opBusbG.webp",
-			"/images/wFkprGimeJ.webp", "/images/wZyJdLicNB.webp",
-			"/images/zRGvpnvJoZ.webp", "/images/zYdyL0xvWc.webp",
-		];
-		return getRandomElement(illustrations);
-	} catch (error) {
-		console.error(error);
-	}
-}
+const storage = getStorage(app);
 
 const initialValue = {
 	author: "Jan Brzechwa",
@@ -77,6 +61,23 @@ export default function App() {
 		setTitle(poem.title);
 		setVerses(poem.verses);
 		getTotalVerses(verses.length);
+	}
+
+	async function drawImage() {
+		try {
+			const images = storageRef(storage, '/');
+			const content = await listAll(images);
+			const itemsLength = content.items.length;
+
+			let paths = [];
+			for (let i = 0; i < itemsLength; i++) {
+				const path = content.items[i]._location.path;
+				paths.push("/images/" + path);
+			}
+			return getRandomElement(paths);
+		} catch (error) {
+			console.error(error);
+		}
 	}
 
 	let counter = 0;
