@@ -4,8 +4,15 @@ import React, { Suspense, useState } from "react";
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getDatabase, ref, child, get } from "firebase/database";
-import { getStorage, ref as storageRef, listAll } from "firebase/storage";
-import { generateRandomNumberInRange, getRandomElement } from "isola/utilities";
+import { 
+	getStorage, 
+	ref as storageRef, 
+	listAll 
+} from "firebase/storage";
+import { 
+	generateRandomNumberInRange, 
+	getRandomElement 
+} from "isola/utilities";
 
 const Header = React.lazy(() => import("./Header"));
 const Footer = React.lazy(() => import("./Footer"));
@@ -45,7 +52,9 @@ export default function App() {
 	const [author, setAuthor] = useState(initialValue.author);
 	const [title, setTitle] = useState(initialValue.title);
 	const [verses, setVerses] = useState(initialValue.verses.content);
-	const [totalVerses, getTotalVerses] = useState(initialValue.verses.content.length);
+	const [totalVerses, getTotalVerses] = useState(
+		initialValue.verses.content.length
+	);
 
 	async function drawPoem() {
 		const reference = ref(getDatabase());
@@ -74,15 +83,28 @@ export default function App() {
 				const path = content.items[i]._location.path;
 				paths.push("/images/" + path);
 			}
-			return getRandomElement(paths);
+
+			const image = getRandomElement(paths);
+			return image;
 		} catch (error) {
 			console.error(error);
 		}
 	}
 
+	function injectImage() {
+		const imagesNumber = verses.length - 1;
+		let images = [];
+		for (let i = 0; i < imagesNumber; i++) {
+			drawImage().then(response => images.push(response));
+		} 
+		return images;
+	}
+
 	let counter = 0;
 	const versesHTML = verses.map(verse => {
 		counter += 1;
+
+		const images = injectImage();
 		
 		const key = crypto.randomUUID();
 		if (counter < totalVerses) return (
@@ -94,7 +116,7 @@ export default function App() {
 				}}
 			></p>
 			<img
-				src={drawImage()} alt=""
+				src={images[counter]} alt=""
 				className="image" tabIndex={0}
 				key={key + "-image"}
 			/></>
@@ -118,7 +140,11 @@ export default function App() {
 						<p className="author" tabIndex={0}>{author}</p>
 						<p className="title" tabIndex={0}>{title}</p>
 					</section>
-					<section className="draw" tabIndex={0} onClick={drawPoem}>
+					<section 
+						className="draw" 
+						tabIndex={0} 
+						onClick={drawPoem}
+					>
 						<DiceIcon />
 						<p className="caption">Wylosuj kolejny wiersz!</p>
 					</section>
