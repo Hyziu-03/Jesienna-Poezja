@@ -29,9 +29,11 @@ html
 
 .header
     text-align: center
-    padding: 3 * $pixel-unit 0
+    padding: 3 * $pixel-unit
     position: sticky
     top: 0
+    @include flex
+    justify-content: center 
 
 .heading
     @include decorative-font
@@ -39,20 +41,14 @@ html
     line-height: $large-mobile-line-height
     padding: 0 $pixel-unit * 2
 
-.name
-    margin-bottom: $pixel-unit * 3
-    text-align: center
-
 .controls
     justify-content: space-evenly
-    flex-direction: column
     margin: 4.5 * $pixel-unit
     @include flex
 
 .draw
     flex-direction: column
     padding: $pixel-unit * 2
-    width: $title-width
     @include flex
     @include hoverable
 
@@ -75,6 +71,11 @@ html
 
 .name
     max-width: $title-width
+    @include flex
+    flex-direction: column
+    justify-content: center
+    text-align: center
+    margin: 0 $pixel-unit * 2
 
 .dice
     box-shadow: $dice-shadow
